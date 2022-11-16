@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About us</title>
+    <link rel="stylesheet" href="style.css">
+    
+</head>
+<style>
+    
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+@font-face {
+    font-family: pop;
+    src: url(./fonts/Poppins-Regular.ttf);
+}
+.about_section{
+    width: 100%;
+    height: auto;
+    background-color: #444;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 50px 13%;
+    font-family: pop;
+}
+.about_img img{
+    width: 430px;
+    
+}
+.about_details h1{
+    font-size: 58px;
+    color: #fff;
+    position: relative;
+}
+.about_details h1::after{
+    content: " ";
+    position: absolute;
+    width: 120px;
+    height: 4px;
+    background-color: #f39c12;
+    border-radius: 5px;
+    left: 0;
+    bottom: 2px;
+}
+.about_details p{
+    font-size: 15px;
+    color: #fff;
+    max-width: 480px;
+    margin: 30px 0 45px 0;
+    line-height: 29px;
+}
+.btn{
+    padding: 10px 25px;
+    border: 2px solid #f39c12;
+    border-radius: 5px;
+    color: #f39c12;
+    text-decoration: none;
+    margin: 30px 0;
+    
+    font-weight: 600;
+}
+.btn:hover{
+    background-color: #f39c12;
+    color: #333;
+}
+.btn1{
+    margin-right: 15px;
+    background-color: #f39c12;
+    color: #000;
+}
+.btn1:hover{
+    background-color: transparent;
+    color: #f39c12;
+}
+
+</style>
+<body>
+    <section class="about_section" id="About">
+        <div class="about_img">
+            <img src="https://media.istockphoto.com/photos/about-us-picture-id1163589059?k=20&m=1163589059&s=612x612&w=0&h=h2JhLYR5652zSLt64wGOfJhDxlMLToQPn4Kd5JT1bJo=" alt="">
+        </div>
+        <div class="about_details">
+            <h1>Who are we</h1>
+            
+            <p>We are a diverse team with unique perspectives. United in our purpose, our strategy and our culture. Driven by our ambition and the power of technology to drive human progress. Unwavering in our commitment to equality, trust and advocacy for one another.</p>
+            <div class="btns">
+                <a href="#" class="btn btn1">EXPLORE NOW</a>
+                <a href="feedback2.html" class="btn btn2">FEEDBACK</a>
+            </div>
+        </div>
+    </section>
+</body>
+</html>

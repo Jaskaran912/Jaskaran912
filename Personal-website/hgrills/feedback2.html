@@ -1,0 +1,266 @@
+ <html>
+    <style>
+        
+@import url('https://fonts.googleapis.com/css?family=Muli&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Quicksand&display=swap');
+
+#container{
+    padding: 40px 60px;
+    max-width: 900px;
+    border: 1px solid rgba(137, 155, 23, 0.2);
+    margin: 0 auto;
+    margin-top: 40px;
+    box-shadow: 0 8px 16px 0 rgba(126, 135, 28, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    font-family: 'Muli', sans-serif;
+    font-weight: 400;
+    line-height: 1.58;
+    letter-spacing: -.003em;
+    font-size: 20px;
+}
+
+
+#title{
+    text-align: center;
+    background: #0FD;
+    color: white;
+    border-radius: 13px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    padding: 5px 5px 5px 5px;
+    font-family: 'Quicksand', sans-serif;
+    font-style: normal;
+    letter-spacing: -.02em;
+    color: -webkit-font-smoothing antialiased;
+}
+
+
+#description{
+    text-align: center;
+    font-size: 25px;
+}
+[10:23 PM, 8/9/2022] Ashutosh: #survey-form{
+    margin-left: 50px;
+    margin-right: 50px;
+}
+
+#section1{
+    display: flex;
+}
+
+#section1 section, #section2 section {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+#section1 section div, #section2 section div {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+}
+
+.fas, .far{
+    margin-right: 0.5rem;
+    margin-top: 1rem;
+    color: rgb(40, 213, 219);;
+}
+
+
+#name{
+    border-top: none;
+    border-right: none;
+    border-left: none;
+    border-width: 0.1rem;
+    width: 20rem;
+}
+
+#name:focus-visible, #email:focus-visible, #password:focus-visible, #number:focus-visible, #dropdown:focus-visible {
+    outline: none;
+    border-bottom: 1px solid rgb(40, 213, 219);
+}
+
+#emailsection{
+    margin-left: 1.5rem;
+}
+
+
+#email{
+    border-top: none;
+    border-right: none;
+    border-left: none;
+    border-width: 0.1rem;
+    width: 20rem;
+}
+
+#email-error {
+    margin-left: 0.5rem;
+    margin-top: 1.5rem;
+    font-size: 0.7rem;
+}
+
+#section2{
+    display: flex;
+    margin-top: 2rem;
+    justify-content: space-between;
+}
+
+
+#password{
+    border-top: none;
+    border-right: none;
+    border-left: none;
+    border-width: 0.1rem;
+}
+
+
+#number{
+    border-top: none;
+    border-right: none;
+    border-left: none;
+    border-width: 0.1rem;
+    width: 12rem;
+}
+
+
+#dropdown{
+    border-top: none;
+    border-right: none;
+    border-left: none;
+    border-width: 0.1rem;
+}
+
+
+
+
+.comment{
+    margin-top: 0px;
+    font-size: 1.5rem;
+}
+
+#textarea{
+    padding: 0.4rem;
+    margin-top: 1.8rem;
+    width: 20rem;
+    height: 2rem;
+}
+
+#textarea:focus-visible {
+    outline: none;
+    border: 1px solid rgb(40, 213, 219);
+}
+
+
+#submit{
+    border: 1px solid rgb(40, 213, 219);
+    background: rgb(40, 213, 219);
+    color: white;
+    border-radius: 5px;
+    box-shadow: 0px 0px 1px 3px rgb(40 213 219);
+    margin-top: 35px;
+    cursor: pointer;
+    width: 5.3rem;
+    height: 1.9rem;
+    font-size: 1rem;
+}
+    </style>
+    <head>
+        <link rel="stylesheet" href="./styles.css">
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/js/fontawesome.min.js"></script>
+    </head>
+    <body>
+        <div id="container">
+            <h1 id="title">Survey Form</h1>
+            <p id="description">Survey about our devices</p>
+            <form id="survey-form">
+            <div id="section1">
+                <section>
+                    <i class="far fa-address-card"></i>
+                    <div>
+                        <label id="name-label">Name</label>
+                        <input id="name" type="text" placeholder="Name" required>
+                    </div>
+                </section>
+                <section id="emailsection">
+                    <i class="far fa-envelope"></i>
+                    <div>
+                        <label id="email-label">Email</label>
+                        <input id="email" type="email" placeholder="Email" required>
+                    </div>
+                    <div id="email-error"></div>
+                </section>
+            </div>   
+            <div id="section2">
+                <section>
+                    <i class="fas fa-unlock-alt"></i>
+                    <div>
+                        <label id="feedback">FEEDBACK</label>
+                        <input id="password" type="feedback" placeholder="give feedback" required>
+                    </div>
+                </section>
+                <section>
+                    <i class="fas fa-phone-alt"></i>
+                    <div>
+                        <label id="number-label">Number</label>
+                        <input id="number" type="number" placeholder="Number" min="0" max="10" required>
+                    </div>
+                </section>
+                <section>
+                    <i class="fas fa-globe"></i>
+                    <div>
+                        <label id="state-label">State</label>
+                        <select id="dropdown" placeholder="Select state">
+                            <option value="Select state">Select state</option>
+                            <option value="Andhra Pradesh">Andhra Pradesh</option>
+                            <option value="Arunachal Pradesh">Arunachal Pradesh</option>
+                            <option value="Assam">Assam</option>
+                            <option value="Bihar">Bihar</option>
+                            <option value="Chhattisgarh">Chhattisgarh</option>
+                            <option value="Goa">Goa</option>
+                            <option value="Gujarat">Gujarat</option>
+                            <option value="Haryana">Haryana</option>
+                            <option value="Himachal Pradesh">Himachal Pradesh</option>
+                            <option value="Jharkhand">Jharkhand</option>
+                            <option value="Karnataka">Karnataka</option>
+                            <option value="Madhya Pradesh">Madhya Pradesh</option>
+                            <option value="Maharashtra">Maharashtra</option>
+                            <option value="Rajasthan">Rajasthan</option>
+                            <option value="Tamil Nadu">TamilNadu</option>
+                            <option value="Telangana">Telangana</option>
+                            <option value="Tripura">Tripura</option>
+                            <option value="Uttar Pradesh">Uttar Pradesh</option>
+                            <option value="Uttarakhand">Uttarakhand</option>
+                            <option value="West Bengal">West Bengal</option>
+                          </select>
+                    </div>
+                </section>
+            </div>
+            
+                <div>
+                    <i class="fas fa-comments comment"></i>
+                    <textarea id="textarea" placeholder="Suggestions"></textarea>
+                </div>
+                <button id="submit" type="button" name="action">Submit</button>
+            </div>
+            
+        
+    </body>
+    <script>
+        let email = document.getElementById("email");
+        const err = document.getElementById("email-error");
+        email.addEventListener("keyup", function (event) {
+            const val = event.target.value;
+            if (!val) {
+                err.innerHTML = "";
+                return;
+            } else {
+                const re = /^(([^<>()[\]\.,;:\s@\"]+(\.[^<>()[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i;
+                const match = re.test(String(val).toLowerCase());
+                if (!match) {
+                    err.innerHTML = '*Email is invalid';
+                    err.style.color = 'red';
+                }
+            }
+        })
+    </script>
+</html>
